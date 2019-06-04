@@ -92,3 +92,13 @@ class EntryLog < BaseService
   # ...
 end
 ```
+
+### One-off rake tasks
+
+We use rake tasks to run certain processes on command. This includes tasks like generating the changelog, or sending a test email to check configuration.
+
+Sometimes we need to use a task only once – for example, if we are checking the validity of a database migration.
+
+One-off tasks should be stored in `lib/tasks/one_off`.
+
+When you write a one-off task, you should create an issue to remind you to delete the task after it's served its purpose, so it doesn't clutter up the repo. The task will still be recorded in the GitHub history if we ever need to refer back to it.
