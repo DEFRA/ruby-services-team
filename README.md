@@ -7,6 +7,7 @@ This acts as a repo of guides and documents specific to the team, plus its where
 ## Contents
 
 - [Patterns & principles](patterns_and_principles.md)
+- [Services](/services/README.md)
 - [Tests](tests.md)
 - [Ways of working](ways_of_working.md)
 
