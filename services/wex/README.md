@@ -24,4 +24,5 @@ The aligned version of the service was completed and released in July 2019, and 
 
 The following pages hold additional information about the service.
 
+- [Activation and Expiration](activation_expiration.md)
 - [Background jobs](background_jobs.md)
