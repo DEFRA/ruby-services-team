@@ -19,3 +19,9 @@ An initial iteration of the WEX digital service was built and released in March 
 That version of WEX was put together in a very different way to how the new code on [WCR](/services/wcr) was being put together, and had some technical debt issues (though nothing as bad as WCR). So to make it feasible that a single team could support maintaining multiple services the first task the team completed was to align the WEX code base to WCR.
 
 The aligned version of the service was completed and released in July 2019, and is what we currently work with and maintain.
+
+## Additional info
+
+The following pages hold additional information about the service.
+
+- [Background jobs](background_jobs.md)
