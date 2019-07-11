@@ -10,7 +10,7 @@ All background jobs are implemented as rake tasks, which are then called by the 
 
 The bulk export is essentially a data dump to a series of CSV files for every submitted registration in the service. Each file contains a months worth of registrations, based on their `submitted_at` date. The CSV files are uploaded to AWS S3 and users in the back office are presented with a series of links to them.
 
-The job currently runs at 02:05 each day and takes approximately 35 to 40 minutes to complete.
+The job currently runs at 02:05 each day and takes approximately 25 minutes to complete.
 
 ## Electronic Public Register (EPR) export
 
