@@ -32,6 +32,6 @@ Even though it is highly unlikely a collision will occur between tokens in the d
 
 We use the [HasSecureToken gem](https://github.com/robertomiranda/has_secure_token) to generate the token.
 
-This is a backport of `ActiveRecord::SecureToken` 5 to AR 3.x and 4.x, and we are aware it has been sometime since any changes have been made to the repository.
+This is a backport of `ActiveRecord::SecureToken` 5 to AR 3.x and 4.x, and we are aware it has been some time since any changes have been made to the repository.
 
 We should be able to drop the gem and use built in ActiveRecord support once we [upgrade to Rails 5].(https://github.com/DEFRA/ruby-services-team/issues/31).
