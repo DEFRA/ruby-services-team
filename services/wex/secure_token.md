@@ -34,4 +34,4 @@ We use the [HasSecureToken gem](https://github.com/robertomiranda/has_secure_tok
 
 This is a backport of `ActiveRecord::SecureToken` 5 to AR 3.x and 4.x, and we are aware it has been sometime since any changes have been made to the repository.
 
-We should be able to drop the gem and use built in ActiveRecord support once we [upgrade to rails 5](https://github.com/DEFRA/ruby-services-team/issues/31).
+We should be able to drop the gem and use built in ActiveRecord support once we [upgrade to Rails 5].(https://github.com/DEFRA/ruby-services-team/issues/31).
