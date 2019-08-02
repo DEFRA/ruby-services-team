@@ -6,7 +6,7 @@ When you start a new registration, or start to renew an existing one, a token is
 - we avoid needing to setup an account
 - we are not adding an additional cookie to their session to track the registration
 
-For example, once a user is past the first page of the new registration journey their browser will show something like this for the url
+For example, once a user is past the first page of the new registration journey, their browser will show something like this for the URL
 
 > https://wasteexemptions.service.gov.uk/location/3zaSBUDkBQzhu8s5xd7Phoow
 
