@@ -3,7 +3,7 @@
 When you start a new registration, or start to renew an existing one, a token is created. We use this token to identify the in-progress `transient_registration`. From a design point of view, this delivers a number of benefits to the user (as long as they retain the link):
 
 - they are not tied to their current session. They can close the browser and return to the journey at a later date
-- we avoid needing to setup an account
+- we avoid needing to set up an account
 - we are not adding an additional cookie to their session to track the registration
 
 For example, once a user is past the first page of the new registration journey, their browser will show something like this for the URL
