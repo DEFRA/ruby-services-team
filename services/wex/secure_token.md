@@ -12,7 +12,7 @@ For example, once a user is past the first page of the new registration journey,
 
 ## Security
 
-Because we're identifying the in-progress registration from a url parameter and not something stored in the cookie, we needed to make sure it's sufficiently complex to guess, and unique enough to avoid duplication.
+Because we're identifying the in-progress registration from a URL parameter and not something stored in the cookie, we needed to make sure it's sufficiently complex to guess, and unique enough to avoid duplication.
 
 The token is generated randomly using [base58](https://api.rubyonrails.org/classes/SecureRandom.html). It is 24 characters from a `{0-9a-zA-Z}` character set (minus `0, O, I and l`). For example, `RA7pzGw7b52M1eaJGr7h2emR`. The total number of unique tokens we can generate is
 
