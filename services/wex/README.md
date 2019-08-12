@@ -26,3 +26,4 @@ The following pages hold additional information about the service.
 
 - [Activation and Expiration](activation_expiration.md)
 - [Background jobs](background_jobs.md)
+- [Renewal window](renewal_window.md)
