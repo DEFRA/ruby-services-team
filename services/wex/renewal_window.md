@@ -10,7 +10,7 @@ Before the release of our renewal feature the service did not support 'renewing'
 
 ## Before expiry window
 
-The guidance states users have  1 month to renew a registration before it expires. The service interprets this as 28 days. The team and business agreed on this decision based
+The guidance states users have 1 month to renew a registration before it expires. The service interprets this as 28 days. The team and business agreed on this decision because
 
 - it simplifies the code
 - it makes it consistent and fair for all users
