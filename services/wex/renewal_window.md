@@ -25,7 +25,7 @@ The service interprets this as 30 days. The team and the business agreed this pe
 
 ## Example
 
-An exemption that is **ACTIVE** on 22 Jan 2017 at 14:35 is officially
+An exemption that is made **ACTIVE** on 22 Jan 2017 at 14:35 is officially
 
 - active from `00:00 22 Jan 2017`
 - expires at `24:00 21 Jan 2020`
