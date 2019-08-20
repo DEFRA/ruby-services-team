@@ -25,13 +25,13 @@ The service interprets this as 30 days. The team and the business agreed this pe
 
 ## Example
 
-An exemption that is made **ACTIVE** on 22 Jan 2017 at 14:35 is officially
+An exemption that is made **ACTIVE** on 01 Aug 2016 at 14:35 is officially
 
-- active from `00:00 22 Jan 2017`
-- expires at `24:00 21 Jan 2020`
-- is expired at `00:00 22 Jan 2020`
+- active from `00:00 01 Aug 2016`
+- expires at `24:00 31 Jul 2019`
+- is expired at `00:00 01 Aug 2020`
 
 The renewal windows are
 
-- can be renewed from `00:00 24 Dec 2019`
-- can no longer be renewed from `24:00 20 Feb 2020`
+- can be renewed from `00:00 03 Jul 2019`
+- can no longer be renewed from `00:00 31 Aug 2019`
