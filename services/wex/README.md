@@ -9,7 +9,7 @@ To quote the intro on the projects README.
 The service itself is built from 3 different repositories
 
 - [Waste exemptions front office](https://github.com/DEFRA/waste-exemptions-front-office)
-- [Waste exemptions back office](https://github.com/DEFRA/waste-exemptions-back-office-ta)
+- [Waste exemptions back office](https://github.com/DEFRA/waste-exemptions-back-office)
 - [Waste exemptions engine](https://github.com/DEFRA/waste-exemptions-engine)
 
 ## History
