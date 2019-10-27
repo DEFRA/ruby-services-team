@@ -65,6 +65,59 @@ end
 test_story = build(:story, :published_but_not_in_print)
 ```
 
+## Unit Vs Integration
+
+### Context
+
+We agree that unit tests will require one `it` definition for each expected behaviour.
+So that a `context` is allowed multiple scenarios.
+
+We agree that we will keep all expectations for a given request or integration test which touches the database context to a maximum of one scenario, with multiple expectations on it.
+This will allow us to test more scenarios (like the forms in the persistent object to being updated and the request status return) in one go and save test suite time.
+
+### Factories
+
+We have agreed that we will not use Factoris in our unit tests, this will make sure that no r/w to the DB is executed giving best performance.
+We can also make sure we control any signal that the code exchange with the integrated object.
+
+### Forms
+
+We have agreed that Forms functionality should be covered by pure unit tests as forms specs (`spec/forms`).
+We have agreed that Forms integrated functionality is tested through the `request`'s scenarios.
+
+### Requests
+
+We agree to use factories with traits in all our request specs.
+Our request specs will mainly check:
+  - Response status (redirect, success, failure)
+  - Persistence of the data after `POST`
+  - Errors raised by invalid parameters
+
+(? Share scenarios ?)
+
+### Services
+
+We have agreed that some services requires integration level testing, while some others do not.
+Is up to the wise developer to chose the road to follow.
+
+Usually we might decide to write integration testes on services if:
+  - The service is the main entry point of a _background job_;
+  - The service contains very complex logic that cannot be split in multiple object and hence the unit test will be too tedious to construct;
+We might decide to not use an integration approach if:
+  - The service is already integration-tested through request tests;
+  - The service performs very simple operations
+
+### Background jobs
+
+We have agreed that we will not test rake tasks.
+We do test scheduled jobs for correctness of informations in a unit-style, but no unit nor integration test is added for them.
+This is becasue we want every one of our Rake task to just contain a call to a `Service` class.
+We can then test our code through an integration test in the service itself.
+
+#### One Off tasks
+
+We can choose to keep code in the rake tasks rather than create a service, and hence, if this is the quickes choise, we will create tasks tests.
+
 ## Assemble - Assert - Act
 
 We agree that tests should divide their Assert, Assemble and Act logic using empty lines. For example
