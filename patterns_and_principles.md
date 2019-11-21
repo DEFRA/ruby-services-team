@@ -45,6 +45,61 @@ module WasteEngine
 end
 ```
 
+### Presenters, helpers and decorators
+
+We use presenters, helpers and decorators to remove complexity from views and models. Which one you use is on a case-by-case basis, but we have some loose rules.
+
+Use **presenters** for a single view that requires a lot of logic. Don't bulk up models with methods that are only needed for display purposes - put them in a presenter instead.
+
+Things that should be in a presenter:
+
+- methods that you want to call on a model but are only required for use in views
+- methods that are only required for a single view
+- methods that determine which text should be displayed (like a long `if/else` block that determines which version of a heading to show)
+- methods that return a `true` or `false` to determine the structure of a page (like a `show_actions_panel?` method)
+
+Things that should not be in a presenter:
+
+- methods that return HTML
+- ability checks involving user roles and CanCanCan
+- methods that are used across multiple views - put these in a decorator or helper instead
+
+Use **decorators** in a similar way to presenters, but for logic which you use across multiple presenters.
+
+Use **helpers** for more generic logic that you intend to be reused in lots of contexts – like a method that takes a first and last name, and outputs them as a single string.
+
+It is OK to use ability checks in helpers.
+
+### Conditional view partials
+
+If you have a partial view which is displayed conditionally, then put the conditional around the `render` tag, not in the partial itself.
+
+For example, do this:
+
+```ruby
+# View
+if condition_is_true?
+  render "shared/my_partial"
+end
+
+# Partial
+<p>Wow, a partial!</p>
+```
+
+And not this:
+
+```ruby
+# View
+render "shared/my_partial"
+
+# Partial
+if condition_is_true?
+  <p>Wow, a partial!</p>
+end
+```
+
+This makes the partial more reusable. It's also easier to get an overview of the whole page from the view that renders it.
+
 ### Object interaction
 
 Where an object needs to interact with another object, that interaction should happen within a private method.
