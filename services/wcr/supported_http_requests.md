@@ -58,27 +58,3 @@ curl -X POST http://localhost:8004/tasks/entity-populator
 ```
 
 It also has the ability to read data from the POST body, and rebuild the collection using it. This was specifically added to support acceptance testing.
-
-### POST /tasks/start-registrationStatusJob
-
-When called will query MongoDb for records that have expired and then update the status of each one. This is also a [background job](https://github.com/DEFRA/waste-carriers-service/wiki/Background-jobs:-expired-registrations)
-
-```bash
-curl -X POST http://localhost:8004/tasks/start-registrationStatusJob
-```
-
-### POST /tasks/start-exportJob
-
-Will generate both the BOXI export files (which is essentially all registrations broken down into a series of CSV files which are imported into a BOXI universe) and the Electronic Public Register file (a single file used to refresh the register each day). This is also a [background job](https://github.com/DEFRA/waste-carriers-service/wiki/Background-jobs)
-
-```bash
-curl -X POST http://localhost:8004/tasks/start-exportJob
-```
-
-### POST /tasks/ir-repopulate
-
-Repopulates the IR Renewals collection from a CSV file. This is a task that in production will only have been run once, but is available as a command so we can recreate and test the service locally.
-
-```bash
-curl -X POST http://localhost:8004/tasks/ir-repopulate
-```
