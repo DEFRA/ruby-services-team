@@ -44,4 +44,4 @@ The job currently runs at 20:00 each day and takes less than a minute to complet
 
 ### Early expiration
 
-The team are aware that due to the timing and filter, this means we are expiring exemptions 4 hours earlier than they are due to expire. The current filter came from the old [waste-carriers-service](https://github.com/DEFRA/waste-carriers-service) project, and was beyond our scope to sort it as part of the tech debt work.
+The team are aware that due to the timing and filter, this means we are expiring registrations 4 hours earlier than they are due to expire. The current filter came from the old [waste-carriers-service](https://github.com/DEFRA/waste-carriers-service) project, and was beyond our scope to sort it as part of the tech debt work.
