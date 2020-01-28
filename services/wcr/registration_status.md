@@ -25,7 +25,7 @@ An upper tier registration is `ACTIVE` once it has been paid for, and any match 
 
 Lower tier registrations never expire so no lower tier registration should have this status.
 
-Upper tier registrations [expire after 3 years](activation_expiration.md) from date of activation. How this is done is via a [job](background_jobs.md) that runs nightly in the Java services looking for expired registrations. Any it finds it marks as `EXPIRED`.
+Upper tier registrations [expire after 3 years](activation_expiration.md) from date of activation. How this is done is via a [job](background_jobs.md) that runs nightly looking for expired registrations. Any it finds it marks as `EXPIRED`.
 
 ### INACTIVE
 

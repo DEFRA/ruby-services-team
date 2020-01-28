@@ -40,6 +40,4 @@ An upper tier registration expires 3 years from the date of activation. So a reg
 - expires at 24:00 21 Jan 2015
 - is expired at 00:00 22 Jan 2015
 
-We rely on a [background job](https://github.com/DEFRA/waste-carriers-service/wiki/Background-jobs:-expired-registrations) to actually mark registrations as expired, and it typically runs at 8pm. It used to have a flaw where it selected those to be expired by querying for any with an expiry date less than the time the job was run. This meant any with an expiry time after 8pm were not picked up, granting them an extra day.
-
-This has since been rectified. This background job is part of the waste carriers service, and as such is at risk of failing should the app go down. As such any logic that checks whether a registration is expired should never rely solely on whether the status is set to `EXPIRED`.
+We rely on a [background job](background_jobs.md) to actually mark registrations as expired, wshich runs at 8pm.

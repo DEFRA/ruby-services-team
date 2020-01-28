@@ -15,7 +15,7 @@ Exceptions caught in the apps are logged to a server an instance of [Errbit](htt
 
 To test Airbrake logging for the front end run `bundle exec rake airbrake:test`
 
-To test Airbrake logging for the Java services, ensure the services is running and then call
+To test Airbrake logging for the Java services, ensure the service is running and then call
 
 ```bash
 curl -X POST http://localhost:9091/tasks/generateTestException
