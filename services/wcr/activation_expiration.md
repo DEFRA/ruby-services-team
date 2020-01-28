@@ -40,4 +40,4 @@ An upper tier registration expires 3 years from the date of activation. So a reg
 - expires at 24:00 21 Jan 2015
 - is expired at 00:00 22 Jan 2015
 
-We rely on a [background job](background_jobs.md) to actually mark registrations as expired, wshich runs at 8pm.
+We rely on a [background job](background_jobs.md) to actually mark registrations as expired, which runs at 8pm.
