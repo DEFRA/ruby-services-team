@@ -4,7 +4,7 @@
 
 Because the service does not talk to the database directly using something like ActiveRecord, any migrations have to be written and added to the project manually.
 
-We use [rake](https://github.com/ruby/rake) to write and execute any data migrations. These should be added to the namespace ```data_migration``` and you can find the ones below in the [data_migration.rake](https://github.com/DEFRA/waste-exemplar-frontend/blob/master/lib/tasks/data_migration.rake) task
+We use [rake](https://github.com/ruby/rake) to write and execute any data migrations. These should be added to the namespace `data_migration` and you can find the ones below in the [data_migration.rake](https://github.com/DEFRA/waste-carriers-frontend/blob/master/lib/tasks/data_migration.rake) task
 
 ## Phase 1 registrations
 
