@@ -8,7 +8,7 @@ We use [rake](https://github.com/ruby/rake) to write and execute any data migrat
 
 ## Phase 1 registrations
 
-Phase 2 involved adding the upper tier process to the service. It covered large scale changes to the functionality and required us to update the existing data in order to work with them. Therefore any records created prior to [v2.0-beta](https://github.com/DEFRA/waste-exemplar-frontend/releases/tag/v2.0-beta) would need to by migrated.
+Phase 2 involved adding the upper tier process to the service. It covered large scale changes to the functionality and required us to update the existing data in order to work with them. Therefore any records created prior to [v2.0-beta](https://github.com/DEFRA/waste-carriers-frontend/releases/tag/v2.0-beta) would need to by migrated.
 
 ```bash
 rake data_migration:lower_tier
