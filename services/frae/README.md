@@ -22,4 +22,5 @@ We are responsible for ensuring dependencies are kept up to date, and investigat
 
 The following pages hold additional information about the service.
 
+- [Multiple organisation addresses](multiple_address_issue.md)
 - [State machine](state_machine.md)
