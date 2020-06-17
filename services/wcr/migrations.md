@@ -4,7 +4,7 @@
 
 Because the service does not talk to the database directly using something like ActiveRecord, any migrations have to be written and added to the project manually.
 
-We use [rake](https://github.com/ruby/rake) to write and execute any data migrations. These should be added to the namespace `data_migration` and you can find the ones below in the [data_migration.rake](https://github.com/DEFRA/waste-carriers-frontend/blob/master/lib/tasks/data_migration.rake) task
+We use [rake](https://github.com/ruby/rake) to write and execute any data migrations. These should be added to the namespace `data_migration` and you can find the ones below in the [data_migration.rake](https://github.com/DEFRA/waste-carriers-frontend/blob/main/lib/tasks/data_migration.rake) task
 
 ## Phase 1 registrations
 
@@ -18,7 +18,7 @@ In this case the migration of phase 1 registrations involved nothing more than a
 
 ## Multiple addresses
 
-Release [to be confirmed](https://github.com/DEFRA/waste-exemplar-frontend) included changes to the registration model so that address details are now held in a model called [address](https://github.com/DEFRA/waste-carriers-frontend/blob/master/app/models/address.rb) which sits in an Ohm [Set](http://www.rubydoc.info/github/soveran/ohm/Ohm/Set) on the registration.
+Release [to be confirmed](https://github.com/DEFRA/waste-exemplar-frontend) included changes to the registration model so that address details are now held in a model called [address](https://github.com/DEFRA/waste-carriers-frontend/blob/main/app/models/address.rb) which sits in an Ohm [Set](http://www.rubydoc.info/github/soveran/ohm/Ohm/Set) on the registration.
 
 The migration script copies the values held on against the root of existing registrations in a new address sub-document held in an array called `addresses`.
 
