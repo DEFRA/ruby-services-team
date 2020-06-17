@@ -2,7 +2,7 @@
 
 A team of awesome furicorns 🦄 dedicated to supporting and improving all Defra digital services built using *Ruby* ❤️ ('cos it's the best)!
 
-This acts as a repo of guides and documents specific to the team, plus its where we manage our master list of issues rather than trying to manage them in individual projects.
+This acts as a repo of guides and documents specific to the team, plus its where we manage our list of issues rather than trying to manage them in individual projects.
 
 ## Contents
 

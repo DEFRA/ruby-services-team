@@ -1,6 +1,6 @@
 # Background jobs
 
-The [Waste Carriers Back Office](https://github.com/DEFRA/waste-carriers-back-office) contains 3 background jobs which are run on a nightly schedule. The schedules are set in [schedule.rb](https://github.com/DEFRA/waste-carriers-back-office/blob/master/config/schedule.rb).
+The [Waste Carriers Back Office](https://github.com/DEFRA/waste-carriers-back-office) contains 3 background jobs which are run on a nightly schedule. The schedules are set in [schedule.rb](https://github.com/DEFRA/waste-carriers-back-office/blob/main/config/schedule.rb).
 
 The schedule is used to create and update [cron](https://en.wikipedia.org/wiki/Cron) jobs (the actual create and update occurs during deployment with [Capistrano](https://capistranorb.com/)). This is implemented using the [whenever gem](https://github.com/javan/whenever).
 
