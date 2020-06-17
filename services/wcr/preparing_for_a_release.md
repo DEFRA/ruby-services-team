@@ -41,7 +41,7 @@ All applications and the engine should have a CHANGELOG, which is updated with e
 
 You must create the version tag before you update the CHANGELOG (the only exception to this is the engine).
 
-To update the changelog, make sure you are on the master branch, and then run the following:
+To update the changelog, make sure you are on the `main` branch, and then run the following:
 
 - `bundle install`
 - `bundle exec rake changelog`
