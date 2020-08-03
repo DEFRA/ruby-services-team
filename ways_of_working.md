@@ -2,6 +2,14 @@
 
 All new team members are encouraged to read [DST-Guides](https://github.com/DEFRA/dst-guides) first. Essentially any processes or ways of working outlined there we follow. What we have here is addendum to that.
 
+## main instead of master
+
+In the summer of 2020 we as a team agreed to change the name of our primary branch in all our repos.
+
+Now the primary default branch is `main`. This applies not just to stuff on GitHub. Projects in our private GitLab instance, and with the help of web-ops, all our infrastructure repos use `main`.
+
+We understand there are those that take exception to this. We also don't claim this solves all problems with acceptance and representation in technology. For this team, it was what we felt was the right thing to do. ❤️
+
 ## Pull requests
 
 Our pull requests follow the standard set out in [DST Guides](https://github.com/DEFRA/dst-guides/blob/master/process/pull_request.md). The TL;DR is
