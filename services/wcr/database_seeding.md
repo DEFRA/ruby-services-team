@@ -2,10 +2,6 @@
 
 Each of the apps contain database seeds, though they are for local development and testing purposes only. In all cases the seeding is based on reading JSON files that contain the data to be seeded, so its easy to customise it and add your own.
 
-## Waste carriers frontend
-
-Running `bundle exec rake db:seed` in the frontend project will seed the database with backend users e.g. agency-super@wcr.gov.uk.
-
 ## Waste carriers back office
 
 Running `bundle exec rake db:seed` in the back office project will seed the database with back office users e.g. bo-user@wcr.gov.uk
