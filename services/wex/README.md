@@ -20,6 +20,8 @@ That version of WEX was put together in a very different way to how the new code
 
 The aligned version of the service was completed and released in July 2019, and is what we currently work with and maintain.
 
+<img src="wex-service-structure-2021-04-11.svg" alt="Waste exemptions service structure" style="width: 600px;"/>
+
 ## Additional info
 
 The following pages hold additional information about the service.

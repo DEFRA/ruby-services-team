@@ -16,7 +16,7 @@ They were built in accordance with what has become our standard model for Rails-
 
 Unlike our other Ruby services, this one uses MongoDb for the database.
 
-<img src="service-structure-2020-10-27.svg" alt="Waste carriers service structure" style="width: 600px;"/>
+<img src="wcr-service-structure-2021-04-11.svg" alt="Waste carriers service structure" style="width: 600px;"/>
 
 ## Repositories
 
