@@ -4,6 +4,8 @@ Upper tier waste carrier registrations incur a charge to register them, and expi
 
 What this page describes is the decisions made and guidance on the 'renewal window', the period during which a user can renew their registration prior to it expiring.
 
+Not to be confused with the [grace window](grace_window.md), which is an additional period after expiry where users are still able to renew.
+
 ## Current window
 
 The current window is **3 months** prior to the registration expiring. So given the following registration (see [Activation and Expiration](activation_expiration.md) for full details about the activation and expiration period and rules)

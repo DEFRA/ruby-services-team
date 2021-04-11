@@ -18,6 +18,8 @@ Currently the team support the service in a maintenance only mode. No new featur
 
 We are responsible for ensuring dependencies are kept up to date, and investigating and resiolving any issues that are reported.
 
+<img src="frae-service-structure-2021-04-11.svg" alt="Flood risk activity exemptions service structure" style="width: 600px;"/>
+
 ## Additional info
 
 The following pages hold additional information about the service.
