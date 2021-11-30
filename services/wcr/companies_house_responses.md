@@ -6,6 +6,8 @@ Companies House actually returns a multitude of statuses so this page is about r
 
 It is based on a detailed response provided by our product owner on 14 December 2017.
 
+[API Documentation](https://developer.company-information.service.gov.uk/) (added 20 November 2021)
+
 ## Possible responses
 
 The possible values that Companies House might report are as follows
