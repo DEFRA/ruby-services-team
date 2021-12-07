@@ -1,6 +1,6 @@
 # Background jobs
 
-The [Waste Carriers Back Office](https://github.com/DEFRA/waste-carriers-back-office) contains 3 background jobs which are run on a nightly schedule. The schedules are set in [schedule.rb](https://github.com/DEFRA/waste-carriers-back-office/blob/main/config/schedule.rb).
+The [Waste Carriers Back Office](https://github.com/DEFRA/waste-carriers-back-office) contains several background jobs which are run on a nightly schedule. The schedules are set in [schedule.rb](https://github.com/DEFRA/waste-carriers-back-office/blob/main/config/schedule.rb).
 
 The schedule is used to create and update [cron](https://en.wikipedia.org/wiki/Cron) jobs (the actual create and update occurs during deployment with [Capistrano](https://capistranorb.com/)). This is implemented using the [whenever gem](https://github.com/javan/whenever).
 
@@ -45,3 +45,15 @@ The job currently runs at 20:00 each day and takes less than a minute to complet
 ### Early expiration
 
 The team are aware that due to the timing and filter, this means we are expiring registrations 4 hours earlier than they are due to expire. The current filter came from the old [waste-carriers-service](https://github.com/DEFRA/waste-carriers-service) project, and was beyond our scope to sort it as part of the tech debt work.
+
+## Removing deletable registrations
+
+As part of the data retention policy, we have introduced a nightly job to delete any registrations that have been marked as INACTIVE (ceased), EXPIRED or REVOKED at least seven years ago. 
+
+The job is scheduled to run at night, but can also be run via Jenkins (eg DEV_77_RUN_REMOVE_DELETABLE_REGISTRATIONS_JOB) or as rask task from within the back office 
+```
+rake remove_deletable_registrations:run
+```
+
+It's worth noting that the date calculations are based on the registration's `last_modified` date, which is updated via a callback whenever the registration is saved. To support testing, we have added some registratons to the Front Office seeds that have the last_modified date and status set to values that will make the registration deletable. These can be viewed via the Back Office search: CBDU235, CBDU236 and CBDU237. 
+
