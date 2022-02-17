@@ -1,6 +1,6 @@
 # Preparing for a release
 
-First, go through all the git repos (including renewals) and do a `git checkout master` & `git pull` to make sure you are working with the latest versions.
+First, go through all the git repos (including renewals) and do a `git checkout main` & `git pull` to make sure you are working with the latest versions.
 
 ## Check your merged PRs
 
@@ -117,7 +117,7 @@ In the body of the event, include the RFC number and which jobs should be run as
 
 If the release includes a data fix as part of a new Jenkins job, then add a README to the Tools repo in GitLab. This should include details about the deployment process, including which jobs to run. Check the repo for previous release note READMEs and follow the same format.
 
-Once the README has been merged into master, copy its contents to the calendar invite. Include a link to the README on GitLab.
+Once the README has been merged into main, copy its contents to the calendar invite. Include a link to the README on GitLab.
 
 ## Once the RFC is approved
 
