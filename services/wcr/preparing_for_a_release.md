@@ -41,15 +41,17 @@ All applications and the engine should have a CHANGELOG, which is updated with e
 
 You must create the version tag before you update the CHANGELOG (the only exception to this is the engine).
 
-To update the changelog, make sure you are on the `main` branch, and then run the following:
-
-- `bundle install`
-- `bundle exec rake changelog`
-- `git add CHANGELOG.md`
-- `git commit -m "Update CHANGELOG"`
-- `git push`
-
-Make sure you have a [GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) set up, or you will hit a request limit. This should be set to `CHANGELOG_GITHUB_TOKEN` in your local environment variables.
+To update the changelog:
+1. Make sure you have a [GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) set up, or you will hit a request limit. This should be set to `CHANGELOG_GITHUB_TOKEN` in your local environment variables.
+1. Create and check out a new release branch off `main` using the version tag, e.g.
+   - `git checkout -b release/v1.1.7`
+1. Run the following:
+   - `bundle install`
+   - `bundle exec rake changelog`
+   - `git add CHANGELOG.md`
+   - `git commit -m "Update CHANGELOG"`
+   - `git push origin release/v1.1.7`
+1. Create a PR for the release branch and merge it into main in the usual way.
 
 ## Update the Jenkins deploy job
 
