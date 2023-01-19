@@ -12,9 +12,25 @@ The [EPR](https://environment.data.gov.uk/public-register/view/search-waste-carr
 
 It was originally maintained by a company called [Epimorphics](https://www.epimorphics.com/) but this changed to [Swirrl](https://www.swirrl.com/) in Oct 2018.
 
-The EPR export produces a CSV file of all **ACTIVE** registrations. The job currently runs at 21:05 each day and takes approximately 5 minutes to complete.
+The EPR export produces a CSV file of all valid registrations. The job currently runs at 21:05 each day and takes approximately 5 minutes to complete.
 
-### Transferring the data
+Current valid registration logic:
+
+Registrations
+
+* Active lower tier registrations will be included in the public register export
+* Upper tier registrations pending a conviction check will NOT be included in the export
+* Upper tier registrations with an approved conviction check will be included in the export
+* Upper tier registrations with an approved conviction check but have a pending payment will NOT be included in the export
+
+Renewals
+
+* Active upper tier registrations with a renewal pending a conviction checks will be included in the export with the expiry date of the registration.
+* Upper tier renewals with a pending conviction check for an expired registration will be included in the export with an expiry date of three years from registrations expiry date.
+* Upper tier renewals with a pending conviction check and a pending payment will NOT be included in the export
+* Upper tier renewals for an expired registration with a pending payment will NOT be included in the export
+
+### Transferring the public register data
 
 The file is uploaded to shared `defra-reporting` AWS S3 bucket. That's as far as our responsibility goes. From there it's grabbed by **Swirrl** who handle updating the EPR with it.
 
@@ -22,13 +38,13 @@ The file is uploaded to shared `defra-reporting` AWS S3 bucket. That's as far as
 
 The BOXI export is used to export everything in the service. The export is made up of several files
 
-- registrations.csv
-- addresses.csv
-- key_people.csv
-- sign_offs.csv
-- orders.csv
-- order_items.csv
-- payments.csv
+* registrations.csv
+* addresses.csv
+* key_people.csv
+* sign_offs.csv
+* orders.csv
+* order_items.csv
+* payments.csv
 
 The end result is that the data is loaded into a BOXI reporting universe to allow users to run reports. The job currently runs at 21:05 each day and takes approximately 5 minutes to complete.
 
@@ -48,12 +64,10 @@ The team are aware that due to the timing and filter, this means we are expiring
 
 ## Removing deletable registrations
 
-As part of the data retention policy, we have introduced a nightly job to delete any registrations that have been marked as INACTIVE (ceased), EXPIRED or REVOKED at least seven years ago. 
+As part of the data retention policy, we have introduced a nightly job to delete any registrations that have been marked as INACTIVE (ceased), EXPIRED or REVOKED at least seven years ago.
 
-The job is scheduled to run at night, but can also be run via Jenkins (eg DEV_77_RUN_REMOVE_DELETABLE_REGISTRATIONS_JOB) or as rask task from within the back office 
-```
-rake remove_deletable_registrations:run
-```
+The job is scheduled to run at night, but can also be run via Jenkins (eg DEV_77_RUN_REMOVE_DELETABLE_REGISTRATIONS_JOB) or as rask task from within the back office
 
-It's worth noting that the date calculations are based on the registration's `last_modified` date, which is updated via a callback whenever the registration is saved. To support testing, we have added some registratons to the Front Office seeds that have the last_modified date and status set to values that will make the registration deletable. These can be viewed via the Back Office search: CBDU235, CBDU236 and CBDU237. 
+`rake remove_deletable_registrations:run`
 
+It's worth noting that the date calculations are based on the registration's `last_modified` date, which is updated via a callback whenever the registration is saved. To support testing, we have added some registratons to the Front Office seeds that have the last_modified date and status set to values that will make the registration deletable. These can be viewed via the Back Office search: CBDU235, CBDU236 and CBDU237.
