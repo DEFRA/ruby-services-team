@@ -20,7 +20,7 @@ Areas in PAFS can be one of four types:
 3. EA Area
 4. Country
 
-RMAs will have a subtype of either LA or WC.
+RMAs will have a subtype of either Lead Local Flood Authority (LLFA), Local authority (LA), Internal Drainage Board (IDB), Highways England (HE) or Water company (WC) .
 
 Unless the Area type is `Country`, the new areas should have a parent area that comes directly above them in the hierarachy, ie RMAs belong to PSOs, PSOs belong to EA Areas and EA Areas belong to Countries.
 
