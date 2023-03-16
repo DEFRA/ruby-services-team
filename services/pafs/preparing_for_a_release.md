@@ -57,7 +57,7 @@ To update the changelog:
 
 Find the PRE-PROD job to deploy the app.
 
-In the `Build` box, update `CAPISTRANO_BRANCH` to the new tag (eg `v1.1.7`). Then save your changes.
+In the jenkins job e.g. `PAFS_PRE_10_USER_DEPLOY` in the properties section, update `DEPLOY_BRANCH` to the new tag (eg `v1.1.7`). Then save your changes.
 
 ## Contact Web Ops
 
@@ -71,11 +71,13 @@ Once you have confirmed the date, you can submit an RFC.
 
 You must submit an RFC, or "request for change", using MyIT.
 
+There is an agreed standard change for minor changes which has preapproval. 
+
+Otherwise all other types of request will have to go through the approval process.
+
 Select the following options to begin an RFC:
 
 "Normal Change" > "Initiate RFC" > "New" (button on top)
-
-If the release includes new areas, make sure to include that in the release notes and request that the `ADD_NEW_AREAS` task is run post deployment.
 
 ### Emergency, expedited and normal RFCs
 
@@ -89,13 +91,13 @@ You can't change the type once you've selected it.
 
 ### Filling in the form
 
-The easiest thing to do is to look up an earlier RFC for the Configuration Item "Waste Carriers, Dealers, Brokers" and copy from that.
+The easiest thing to do is to look up an earlier RFC for the Configuration Item "PAFS" and copy from that.
 
 However, if you are filling in a new form, be sure to fill in the fields as follows:
 
 - Category - "software"
 - Environment - "production"
-- Configuration item - "Waste Carriers, Dealers, Brokers".
+- Configuration item - "PAFS".
 - Short descriptions - "Deploy service changes" (plus "fix data issues" if release includes a data fix)
 - Description – copy the opening section from an earlier RFC. For each repo involved, add the name of repo, a link to the CHANGELOG, then copy and paste from changelog for each repo affected. You may need to tidy up formatting. If including data fixes, describe each one in a bullet point.
 
