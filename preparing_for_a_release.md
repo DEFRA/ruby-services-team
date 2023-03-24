@@ -1,12 +1,41 @@
 # Preparing for a release
 
-First, go through all the git repos (including renewals) and do a `git checkout main` & `git pull` to make sure you are working with the latest versions.
+First, go through all the git repos (including renewals) and do a `git checkout main` & `git pull` to make sure you are working with the latest versions. For applications which use an engine / core gem, make sure the application is using the latest engine version (`e.g. bundle update waste_carriers_engine`).
+
+## Determine the version tags
+
+We use semantic versioning to differentiate between patch, minor and major releases. You can find out what the last version number was by going to the application repo (front-office/back-ffice) on GitHub and looking at its releases page. Use this as the base to determine the version tag for this release, e.g. `v1.1.7`.
+
+## Create release branches
+
+For the applications, use the version tag, e.g.
+
+`git checkout -b release/v1.1.7`
+
+For the engine (just for the purpose of updating the CHANGELOG) create a chore branch, e.g.
+
+`git checkout -b chore/changelog`
 
 ## Check your merged PRs
 
 Review the merged PRs that will be included in this release and make sure they have been tagged appropriately (eg `enhancement`, `bug`).
 
 This will allow us to sort different types of changes when the CHANGELOG is generated.
+
+## Update the CHANGELOG
+
+All applications and the engine should have a CHANGELOG, which is updated with every release.
+
+To update the changelog:
+1. Make sure you have a [GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) set up, or you will hit a request limit. Your local environment variables should have `CHANGELOG_GITHUB_TOKEN` set to the token value.
+1. Run the following:
+   - `bundle install`
+   - `bundle exec rake changelog`
+   - `git add CHANGELOG.md`
+   - `git commit -m "Update CHANGELOG"`
+   - `git push origin release/v1.1.7`
+   - (or `git push origin chore/changelog` for the engine)
+1. On GitHub, create a PR for the branch and merge it into main in the usual way.
 
 ## Create version tags
 
@@ -15,6 +44,10 @@ We use version tags to tell Jenkins which release to deploy.
 The engine does not need a version tag as it is not deployed directly, but all applications should have one.
 
 We use semantic versioning to differentiate between patch, minor and major releases. You can find out what the last version number was by going to the repo on GitHub and looking at its releases page.
+
+Ensure you tag the newly merged `main` branch:
+
+`git checkout main & git pull`
 
 Create a new version tag in the command line:
 
@@ -31,6 +64,7 @@ Tag the version before you submit the RFC, but _don't_ create a release in GitHu
 If you need to cancel a release and no longer need the version tag, delete it with the following commands:
 
 `git push --delete origin v1.1.7`
+
 `git push --delete v1.1.7`
 
 This makes sure the release list only contains real releases.
@@ -52,6 +86,11 @@ To update the changelog:
    - `git commit -m "Update CHANGELOG"`
    - `git push origin release/v1.1.7`
 1. Create a PR for the release branch and merge it into main in the usual way.
+
+=======
+`git tag --delete v1.1.7`
+
+This makes sure the release list only contains real releases.
 
 ## Update the Jenkins deploy job
 
