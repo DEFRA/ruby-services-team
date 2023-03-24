@@ -5,3 +5,4 @@ Unlike most digital teams in Defra, the **Ruby services team** maintains multipl
 - [Register your flood risk activity exemptions](/services/frae)
 - [Register or renew as a waste carrier, broker or dealer](/services/wcr)
 - [Register your waste exemptions](/services/wex)
+- [Project Application Funding Service](/services/pafs)

@@ -1,6 +1,6 @@
 # Preparing for a release
 
-First, go through all the git repos (including renewals) and do a `git checkout main` & `git pull` to make sure you are working with the latest versions.
+First, go through all the git repos (including renewals) and do a `git checkout main` & `git pull` to make sure you are working with the latest versions. For applications which use an engine / core gem, make sure the application is using the latest engine version (`e.g. bundle update waste_carriers_engine`).
 
 ## Determine the version tags
 
@@ -64,6 +64,30 @@ Tag the version before you submit the RFC, but _don't_ create a release in GitHu
 If you need to cancel a release and no longer need the version tag, delete it with the following commands:
 
 `git push --delete origin v1.1.7`
+
+`git push --delete v1.1.7`
+
+This makes sure the release list only contains real releases.
+
+## Update the CHANGELOG
+
+All applications and the engine should have a CHANGELOG, which is updated with every release.
+
+You must create the version tag before you update the CHANGELOG (the only exception to this is the engine).
+
+To update the changelog:
+1. Make sure you have a [GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) set up, or you will hit a request limit. This should be set to `CHANGELOG_GITHUB_TOKEN` in your local environment variables.
+1. Create and check out a new release branch off `main` using the version tag, e.g.
+   - `git checkout -b release/v1.1.7`
+1. Run the following:
+   - `bundle install`
+   - `bundle exec rake changelog`
+   - `git add CHANGELOG.md`
+   - `git commit -m "Update CHANGELOG"`
+   - `git push origin release/v1.1.7`
+1. Create a PR for the release branch and merge it into main in the usual way.
+
+=======
 `git tag --delete v1.1.7`
 
 This makes sure the release list only contains real releases.
