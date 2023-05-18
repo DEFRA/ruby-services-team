@@ -11,6 +11,7 @@ This acts as a repo of guides and documents specific to the team, plus its where
 - [Services](/services/README.md)
 - [Tests](tests.md)
 - [Ways of working](ways_of_working.md)
+- [Design Notes](design_notes.md)
 
 ## Contributing to this project
 
