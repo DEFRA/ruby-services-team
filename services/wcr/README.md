@@ -65,6 +65,7 @@ The following pages hold additional information about the service.
 - [Renewals](renewals.md)
 - [Renewal window](renewal_window.md)
 - [Valid responses from Companies House](companies_house_responses.md)
+- [Renewal reminders](renewal_reminders.md)
 
 Defunct documentation:
 
