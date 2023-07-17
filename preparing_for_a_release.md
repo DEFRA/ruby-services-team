@@ -72,17 +72,16 @@ This makes sure the release list only contains real releases.
 ## Publish the Release
 To publish the release:
 
-Go to the repository's code page.
-Click on "Releases" on the right-hand side of the page.
-View the latest release and copy the description from it.
-Click the option to "Draft a new release".
-Select the tag for the release.
-Fill in/paste and edit the description with the RFC number, today's date, and ensure the CHANGELOG link is correct.
-Click "Publish".
-Edit the description for the Jira ticket for the release and add a tick mark after the step to publish the release on GitHub.
-Please note that these instructions assume familiarity with the repository's code page, GitHub's release functionality, and Jira ticket management.
+- Go to the repository's code page.
+- Click on "Releases" on the right-hand side of the page.
+- View the latest release and copy the description from it.
+- Click the option to "Draft a new release".
+- Select the tag for the release.
+- Fill in/paste and edit the description with the RFC number, today's date, and ensure the CHANGELOG link is correct.
+- Click "Publish".
+- Edit the description for the Jira ticket for the release and add a tick mark after the step to publish the release on GitHub.
+- Please note that these instructions assume familiarity with the repository's code page, GitHub's release functionality, and Jira ticket management.
 
-=======
 
 ## Update the Jenkins deploy job
 
