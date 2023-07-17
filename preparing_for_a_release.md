@@ -69,28 +69,20 @@ If you need to cancel a release and no longer need the version tag, delete it wi
 
 This makes sure the release list only contains real releases.
 
-## Update the CHANGELOG
+## Publish the Release
+To publish the release:
 
-All applications and the engine should have a CHANGELOG, which is updated with every release.
-
-You must create the version tag before you update the CHANGELOG (the only exception to this is the engine).
-
-To update the changelog:
-1. Make sure you have a [GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) set up, or you will hit a request limit. This should be set to `CHANGELOG_GITHUB_TOKEN` in your local environment variables.
-1. Create and check out a new release branch off `main` using the version tag, e.g.
-   - `git checkout -b release/v1.1.7`
-1. Run the following:
-   - `bundle install`
-   - `bundle exec rake changelog`
-   - `git add CHANGELOG.md`
-   - `git commit -m "Update CHANGELOG"`
-   - `git push origin release/v1.1.7`
-1. Create a PR for the release branch and merge it into main in the usual way.
+Go to the repository's code page.
+Click on "Releases" on the right-hand side of the page.
+View the latest release and copy the description from it.
+Click the option to "Draft a new release".
+Select the tag for the release.
+Fill in/paste and edit the description with the RFC number, today's date, and ensure the CHANGELOG link is correct.
+Click "Publish".
+Edit the description for the Jira ticket for the release and add a tick mark after the step to publish the release on GitHub.
+Please note that these instructions assume familiarity with the repository's code page, GitHub's release functionality, and Jira ticket management.
 
 =======
-`git tag --delete v1.1.7`
-
-This makes sure the release list only contains real releases.
 
 ## Update the Jenkins deploy job
 
