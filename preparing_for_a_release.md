@@ -47,7 +47,7 @@ We use semantic versioning to differentiate between patch, minor and major relea
 
 Ensure you tag the newly merged `main` branch:
 
-`git checkout main & git pull`
+`git checkout main && git pull`
 
 Create a new version tag in the command line:
 
