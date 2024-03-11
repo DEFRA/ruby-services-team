@@ -30,7 +30,7 @@ To update the changelog:
 1. Make sure you have a [GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) set up, or you will hit a request limit. Your local environment variables should have `CHANGELOG_GITHUB_TOKEN` set to the token value.
 1. Run the following:
    - `bundle install`
-   - `bundle exec rake changelog`
+   - `bundle exec rake changelog`   (if it's failing, then try `github_changelog_generator --verbose -u defra -p REPO_NAME`)
    - `git add CHANGELOG.md`
    - `git commit -m "Update CHANGELOG"`
    - `git push origin release/v1.1.7`
