@@ -5,6 +5,10 @@ This calculation module is based on Data Model defined in https://eaflood.atlass
 
 Overall criteria and the presence of custom Farming charging requirements (and possibly custom Charity charging requirements) make it a perfect scenario for the use of the Strategy design pattern
 
+![alt text](charge_calculation_module.png)
+
+P.S. This diagram does not include full Data Model, only objects that are directly used by Charge Calculation Module
+
 #### Charging Strategy Interface
 
 ```ruby
