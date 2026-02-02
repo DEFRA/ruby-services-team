@@ -65,7 +65,7 @@ If you need to cancel a release and no longer need the version tag, delete it wi
 
 `git push --delete origin v1.1.7`
 
-`git push --delete v1.1.7`
+`git tag --delete v1.1.7`
 
 This makes sure the release list only contains real releases.
 
