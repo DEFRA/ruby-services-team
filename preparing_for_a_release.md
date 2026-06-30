@@ -2,6 +2,8 @@
 
 First, go through all the git repos (including renewals) and do a `git checkout main` & `git pull` to make sure you are working with the latest versions. For applications which use an engine / core gem, make sure the application is using the latest engine version (`e.g. bundle update waste_carriers_engine`).
 
+> Some services provide helper scripts (`bin/prepare-release` / `bin/complete-release`) that automate the branch, changelog and tagging steps below. See [Preparing for a release with helper scripts](preparing_for_a_release_with_scripts.md).
+
 ## Determine the version tags
 
 We use semantic versioning to differentiate between patch, minor and major releases. You can find out what the last version number was by going to the application repo (front-office/back-ffice) on GitHub and looking at its releases page. Use this as the base to determine the version tag for this release, e.g. `v1.1.7`.
